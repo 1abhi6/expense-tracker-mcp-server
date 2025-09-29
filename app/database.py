@@ -1,3 +1,4 @@
+
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
@@ -11,3 +12,5 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 # Base class for ORM models
 Base = declarative_base()
+
+from app.models import user, category, expense
