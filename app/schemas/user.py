@@ -1,4 +1,4 @@
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel, EmailStr, Field
 from datetime import datetime
 
 
@@ -8,7 +8,11 @@ class UserBase(BaseModel):
 
 
 class UserCreate(UserBase):
-    password: str  # plain password for registration
+    password: str = Field(
+        min_length=2,
+        max_length=128,
+        description="User's password maximum length is 128 characters",
+    )  # plain password for registration
 
 
 class UserOut(UserBase):
@@ -17,3 +21,13 @@ class UserOut(UserBase):
 
     class Config:
         orm_mode = True
+
+
+class UserLogin(BaseModel):
+    email: EmailStr
+    password: str
+
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str = "bearer"
