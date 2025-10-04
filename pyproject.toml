@@ -5,15 +5,15 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "alembic>=1.16.5",
-    "argon2-cffi>=25.1.0",
-    "fastapi>=0.118.0",
-    "fastmcp>=2.12.4",
-    "passlib[bcrypt]>=1.7.4",
-    "psycopg2>=2.9.10",
-    "pydantic>=2.11.9",
-    "python-dotenv>=1.1.1",
-    "python-jose[cryptography]>=3.5.0",
-    "sqlalchemy>=2.0.43",
-    "uvicorn>=0.37.0",
+    "alembic",
+    "argon2-cffi",
+    "fastapi",
+    "fastmcp",
+    "passlib[bcrypt]",
+    "psycopg2",
+    "pydantic",
+    "python-dotenv",
+    "python-jose[cryptography]",
+    "sqlalchemy",
+    "uvicorn",
 ]
