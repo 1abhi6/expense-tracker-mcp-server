@@ -10,7 +10,7 @@ dependencies = [
     "fastapi",
     "fastmcp",
     "passlib[bcrypt]",
-    "psycopg2",
+    "psycopg2-binary",
     "pydantic",
     "python-dotenv",
     "python-jose[cryptography]",
